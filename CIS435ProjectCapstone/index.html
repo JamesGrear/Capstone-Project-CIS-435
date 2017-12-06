@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>
+			Tom's Media Repository
+		</title>
+		
+		<link rel="shortcut icon" href="Books.png">
+		<link rel="stylesheet" href="CSS/normalize.css">
+		<link rel = "stylesheet"  href="CSS/WebStyles.css"> 
+	<meta charset="UTF-8">
+	</head>
+	<body>
+		<h3 id="Title">
+			Do I own it?
+		</h3>
+	<div>
+			<h2>
+				Your Library experience personalized
+			</h2>
+			<form method="post" action="PHP/ViewCollections.php">
+				<input type="text"  id="searchbar" placeholder="Search for items in your library...">
+				<br><br>
+                                
+				<input type="submit" value="Search" id="searchbtn">
+                        </form>
+				<br><br>
+                        <form>
+					<input type="button" value="+ Books" id="addbook" name="addbook" onclick="show()"> 
+					<br><br>
+					<input type="button" value="+ Movies" id="addmovies" name="addmovies" onclick="show()"> 
+					<br><br>
+					<input type="button" value="+ Music" id="addmusic" name="addmusic" onclick="show()"> 	
+					<br><br>		
+					<input type="button" value="+ Games" id="addgames" name="addgames" onclick="show()">
+			</form>	
+	 </div>
+	 <script type="text/javascript" src="Scripts/DIOIscripts.js"></script>
+	</body>
+	
+</html>
