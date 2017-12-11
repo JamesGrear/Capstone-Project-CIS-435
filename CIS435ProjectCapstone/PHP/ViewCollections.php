@@ -150,6 +150,7 @@ $execStatement3->closeCursor();
                         //surrounds data in a table an inserts it into a column 
                              echo '<table>
                                    <tr>';
+                             
 			       foreach($bookList as $book)
 			       {
                                     $rowindexb++;
@@ -171,20 +172,21 @@ $execStatement3->closeCursor();
         <div id="Games">
         <h3 id="ga">Games</h3>
                         <?php 
-                            $rowindex =0;
+                            $rowindexg =0;
                         //surrounds data in a table an inserts it into a column 
                              echo '<table>
                                    <tr>';
 			       foreach($gameList as $game)
                                {
+                                 $rowindexg++;
 			         echo "&nbsp;&nbsp".'<td>'. $game['title'].'</td>';
                                  echo '<td>'.$game['system'].'</td>';
                                  echo '<td>'.$game['genre'].'</td>';
 			      //used to ensure that a new row is made with each iteration of data
-                                    if($rowindex == 1) 
+                                    if($rowindexg == 1) 
                                     {
                                         echo '</tr><tr>';
-                                        $rowindex =0;
+                                        $rowindexg =0;
                                     }
                                }
                             echo '</tr>
@@ -195,20 +197,21 @@ $execStatement3->closeCursor();
         <div id="Movies">
         <h3 id="mo">Movies</h3>
                         <?php 
-                               $rowindex =0;
+                               $rowindexm =0;
                         //surrounds data in a table an inserts it into a column 
                              echo '<table>
                                    <tr>';
 			       foreach($movieList as $film)
                                {
+                                $rowindexm++;
 			         echo "&nbsp;&nbsp".'<td>'.$film['title'].'</td>';
                                  echo '<td>'.$film['year'].'</td>';
                                  echo '<td>'.$film['genre'].'</td>';
 			      //used to ensure that a new row is made with each iteration of data
-                                    if($rowindex == 1) 
+                                    if($rowindexm == 1) 
                                     {
                                         echo '</tr><tr>';
-                                        $rowindex =0;
+                                        $rowindexm =0;
                                     }
                                }
                             echo '</tr>
@@ -220,26 +223,27 @@ $execStatement3->closeCursor();
         <div id="Music">
         <h3 id="mu">Music</h3>
                         <?php 
-                            $rowindex =0;
+                            $rowindexmu =0;
                         //surrounds data in a table an inserts it into a column 
                              echo '<table>
                                    <tr>';
 			       foreach($musicList as $jam)
                                {
+                                 $rowindexmu++;
 			         echo "&nbsp;&nbsp".'<td>'.$jam['title'].'</td>';
                                  echo '<td>'.$jam['artist'].'</td>';
                                  echo '<td>'.$jam['genre'].'</td>';
 			        //used to ensure that a new row is made with each iteration of data
-                                    if($rowindex == 1) 
+                                    if($rowindexmu == 1) 
                                     {
                                         echo '</tr><tr>';
-                                        $rowindex =0;
+                                        $rowindexmu =0;
                                     }
                                }
                             echo '</tr>
                                </table>';
 			  ?>
         </div>
-        
+        <a href="../index.php">Go back to main page</a>
    </body>
 </html>
