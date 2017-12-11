@@ -71,6 +71,7 @@ $execStatement3->closeCursor();
                      width: 600px;
                      height: 250px;
                      margin: 0 auto;
+                     overflow:auto;
                }
                
                 #Games{
@@ -80,6 +81,7 @@ $execStatement3->closeCursor();
                      width: 600px;
                      height: 250px;
                      margin: 0 auto;
+                     overflow:auto;
                }
                
                 #Movies{
@@ -89,6 +91,7 @@ $execStatement3->closeCursor();
                      width: 600px;
                      height: 250px;
                      margin: 0 auto;
+                     overflow:auto;
                }
                
                 #Music{
@@ -98,6 +101,7 @@ $execStatement3->closeCursor();
                      width: 600px;
                      height: 250px;
                      margin: 0 auto;
+                     overflow:auto;
                }
                
                #bo{
@@ -128,6 +132,13 @@ $execStatement3->closeCursor();
                     border-color: #999999;
                     background-color: #999999;
                }
+               table, tr, td 
+                {
+                      border: 1px solid black;
+                      border-collapse: collapse;
+                      width: 600px;
+                      
+                }
            </style>
         </head>
 	<body>
@@ -135,40 +146,98 @@ $execStatement3->closeCursor();
         <div id ="Books">
  	<h3 id="bo">Books</h3>
 			<?php 
+                        $rowindexb =0;
+                        //surrounds data in a table an inserts it into a column 
+                             echo '<table>
+                                   <tr>';
 			       foreach($bookList as $book)
-				   {
-			         echo $book['title'] . "" .$book['author']. "" . $book['genre']. '<br>';
-			       }
+			       {
+                                    $rowindexb++;
+                                    echo "&nbsp;&nbsp".'<td>'.$book['title'].'</td>';
+                                    echo '<td>'.$book['author'].'</td>';
+                                    echo '<td>'.$book['genre'].'</td>';
+			        //used to ensure that a new row is made with each iteration of data
+                                    if($rowindexb == 1) 
+                                    {
+                                        echo '</tr><tr>';
+                                        $rowindexb =0;
+                                    }
+                               }
+                            echo '</tr>
+                               </table>';
 			  ?>
         </div>
             
         <div id="Games">
         <h3 id="ga">Games</h3>
                         <?php 
+                            $rowindex =0;
+                        //surrounds data in a table an inserts it into a column 
+                             echo '<table>
+                                   <tr>';
 			       foreach($gameList as $game)
                                {
-			         echo $game['title'] . "" .$game['system']. "" . $game['genre']. '<br>';
-			       }
+			         echo "&nbsp;&nbsp".'<td>'. $game['title'].'</td>';
+                                 echo '<td>'.$game['system'].'</td>';
+                                 echo '<td>'.$game['genre'].'</td>';
+			      //used to ensure that a new row is made with each iteration of data
+                                    if($rowindex == 1) 
+                                    {
+                                        echo '</tr><tr>';
+                                        $rowindex =0;
+                                    }
+                               }
+                            echo '</tr>
+                               </table>';
 			  ?>
         </div>
         
         <div id="Movies">
         <h3 id="mo">Movies</h3>
                         <?php 
+                               $rowindex =0;
+                        //surrounds data in a table an inserts it into a column 
+                             echo '<table>
+                                   <tr>';
 			       foreach($movieList as $film)
-				   {
-			         echo $film['title'] . "" .$film['year']. "" . $film['genre']. '<br>';
-			       }
+                               {
+			         echo "&nbsp;&nbsp".'<td>'.$film['title'].'</td>';
+                                 echo '<td>'.$film['year'].'</td>';
+                                 echo '<td>'.$film['genre'].'</td>';
+			      //used to ensure that a new row is made with each iteration of data
+                                    if($rowindex == 1) 
+                                    {
+                                        echo '</tr><tr>';
+                                        $rowindex =0;
+                                    }
+                               }
+                            echo '</tr>
+                               </table>';
+
 			  ?>
         </div>
         
         <div id="Music">
         <h3 id="mu">Music</h3>
                         <?php 
+                            $rowindex =0;
+                        //surrounds data in a table an inserts it into a column 
+                             echo '<table>
+                                   <tr>';
 			       foreach($musicList as $jam)
-				   {
-			         echo $jam['title'] . "" .$jam['artist']. "" . $jam['genre']. '<br>';
-			       }
+                               {
+			         echo "&nbsp;&nbsp".'<td>'.$jam['title'].'</td>';
+                                 echo '<td>'.$jam['artist'].'</td>';
+                                 echo '<td>'.$jam['genre'].'</td>';
+			        //used to ensure that a new row is made with each iteration of data
+                                    if($rowindex == 1) 
+                                    {
+                                        echo '</tr><tr>';
+                                        $rowindex =0;
+                                    }
+                               }
+                            echo '</tr>
+                               </table>';
 			  ?>
         </div>
         

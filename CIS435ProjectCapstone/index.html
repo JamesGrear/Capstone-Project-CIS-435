@@ -15,27 +15,53 @@
 		<h3 id="Title">
 			Do I own it?
 		</h3>
-	<div>
+	
 			<h2>
 				Your Library experience personalized
 			</h2>
-			<form method="post" action="PHP/ViewCollections.php">
-				<input type="text"  id="searchbar" placeholder="Search for items in your library...">
-				<br><br>
-                                
-				<input type="submit" value="Search" id="searchbtn">
-                        </form>
-				<br><br>
-                        <form>
-					<input type="button" value="+ Books" id="addbook" name="addbook" onclick="show()"> 
-					<br><br>
-					<input type="button" value="+ Movies" id="addmovies" name="addmovies" onclick="show()"> 
-					<br><br>
-					<input type="button" value="+ Music" id="addmusic" name="addmusic" onclick="show()"> 	
+                        <form id="FormCap" name="FormCap" method ="post" action="PHP/UpdateLibrary.php">
+                            <br>
+                            <input type="text"  id="searchbar" placeholder="Search for items in your library...">
+                            <br><br>
+                            <input type="submit" value="Search" id="searchbtn">
+                            
+					<input type="button" value="+ Books" id="addbook" name="addbook" onclick="showbook()"> 
+                                  <div id="novel" style="display:none">
+                                        Title: <input type="text" name="bttl" id="bttl"> 
+                                        Author: <input type="text" name="ba" id="ba"> 
+                                        Genre: <input type="text" name="bg" id="bg">
+                                        <br><br>
+                                        <input type="button" value ="submit" id="sbmtnovel" onclick="linkformB()" >
+                                  </div>
+                                        
+                                        <br><br>
+					<input type="button" value="+ Movies" id="addmovies" name="addmovies" onclick="showfilm()">
+                                    <div id="cinema" style="display:none">
+                                        Title: <input type="text" name="mottl" id="mottl"> 
+                                        Year: <input type="text" name="myr" id="myr"> 
+                                        Genre: <input type="text" name="mg" id="mg"> 
+                                        <br><br>
+                                        <input type="button" value ="submit" id="sbmtcinema" onclick="linkformMo()">
+                                    </div>
+                                        <br><br>
+					<input type="button" value="+ Music" id="addmusic" name="addmusic" onclick="showmusic()"> 
+                                      <div id="sound" style="display:none">    
+                                        Title: <input type="text" name="muttl" id="muttl"> 
+                                        Artist: <input type="text" name="mart" id="mart"> 
+                                        Genre: <input type="text" name="mug" id="mug"> 
+                                        <br><br>
+                                        <input type="button" value ="submit" id="sbmtsound" onclick="linkformMu()">
+                                      </div>
 					<br><br>		
-					<input type="button" value="+ Games" id="addgames" name="addgames" onclick="show()">
-			</form>	
-	 </div>
+					<input type="button" value="+ Games" id="addgames" name="addgames" onclick="showgame()">
+                                    <div id="Vidya" style="display:none"> 
+                                        Title: <input type="text" name="gttl" id="gttl"> 
+                                        System: <input type="text" name="gsys" id="gsys"> 
+                                        Genre: <input type="text" name="gg" id="gg"> 
+                                        <br><br>
+                                        <input type="button" value ="submit" id="sbmtVidya" onclick="linkformG()">
+                                    </div>
+                        </form>
 	 <script type="text/javascript" src="Scripts/DIOIscripts.js"></script>
 	</body>
 	

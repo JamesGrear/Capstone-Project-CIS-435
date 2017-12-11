@@ -9,12 +9,12 @@ body{
 	text-align: center;
 }
 
-div{
+#FormCap{
 	border-style: solid;
 	border-width: 2px 2px 2px 2px;
 	border-radius: 24px;
-	width: 600px;
-	height: 500px;
+	width: 800px;
+	height: 580px;
 	margin: 0 auto;
 	background-color: #CCCCCC;
 	
@@ -28,7 +28,7 @@ div{
 }
 
 #searchbar{
-	height: 40%;
+	height: 5%;
 	width: 80%;
 
 }
@@ -38,6 +38,22 @@ div{
 	font-size: 16px;
 }
 
+
+#sbmtVidya{
+    width: 300px;
+}
+
+#sbmtnovel{
+    width: 300px;
+}
+
+#sbmtsound{
+    width: 300px;
+}
+
+#sbmtcinema{
+    width: 300px;
+}
 #addbook{
  color:white;
  border:none;
