@@ -19,11 +19,11 @@
 			<h2>
 				Your Library experience personalized
 			</h2>
-                        <a href="PHP/UpdateLibrary.php">Your Library</a>
+            
                         <form action="PHP/ViewCollections.php">
-                            <input type="submit" value="View Current Library">
+                            <input type="submit" value="View Current Library" id ="View">
                         </form>
-                        
+            <br><br>
                         
                         <form id="FormCap" name="FormCap" method ="post" action="PHP/UpdateLibrary.php">
                             <br>

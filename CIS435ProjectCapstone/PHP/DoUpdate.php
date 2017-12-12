@@ -7,16 +7,19 @@
 	$title = filter_input(INPUT_POST, 'bttl');
 	$title = htmlspecialchars($title);
 	
+        
 	$author = filter_input(INPUT_POST, 'ba');
 	$author = htmlspecialchars($author);
 	
+        
 	$genre = filter_input(INPUT_POST, 'bg');
 	$genre = htmlspecialchars($genre);
+     
         
         //query books to update values
         $querybook = "UPDATE books
 					SET author=:ba,
-					     genre=:bg,
+					     genre=:bg
 					WHERE title=:bttl";
 					
         $bookupdate = $db->prepare($querybook);
@@ -41,7 +44,7 @@
         //query books to update values
         $queryfilm = "UPDATE movies
 					SET year=:myr,
-					     genre=:mg,
+					     genre=:mg
 					WHERE title=:mottl";
 					
         $filmupdate = $db->prepare($queryfilm);
@@ -67,7 +70,7 @@
         //query books to update values
         $querymusic = "UPDATE music
 					SET artist=:mart,
-					     genre=:mug,
+					     genre=:mug
 					WHERE title=:muttl";
 					
         $musicupdate = $db->prepare($querymusic);
@@ -92,7 +95,7 @@
         //query books to update values
         $querygames = "UPDATE games
 					SET system=:gsys,
-					     genre=:gg,
+					     genre=:gg
 					WHERE title=:gttl";
 					
         $gameupdate = $db->prepare($querygames);
